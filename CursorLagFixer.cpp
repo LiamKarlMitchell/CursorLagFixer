@@ -2,7 +2,7 @@
 // Modifies SetCursor API to return NULL doing nothing.
 // Sets the Window Handles HCURSOR to NULL.
 //
-// Usage: CursorLagFixer SomeProgram.exe
+// Usage: CursorLagFixer ProcessName.exe
 
 #include "pch.h"
 #include <list>
@@ -93,7 +93,7 @@ DWORD PSAPI_EnumProcesses(list<DWORD>& listProcessIDs, DWORD dwMaxProcessCount)
 
 int main(int argc, char* argv[]) {
 	if (argc == 1) {
-		printf("Usage: %s ProgramName.exe", argv[0]);
+		printf("Usage: %s ProcessName.exe", argv[0]);
 		Sleep(5000);
 		return 0;
 	}
